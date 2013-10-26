@@ -1,1 +1,2 @@
 Only commit something that compiles.
+We're using xboard-4.7.2 source
