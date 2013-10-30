@@ -1,2 +1,3 @@
-Only commit something that compiles.
+Only commit code that compiles.
 We're using xboard-4.7.2 source
+If it doesn't compile, it better not be code.
