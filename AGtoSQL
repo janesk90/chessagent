@@ -1,0 +1,19 @@
+def read_ag_files():
+	finalDatabase = open('chessTutor.sql', 'w')
+	#create tables
+	finalDatabase.write("CREATE TABLE Tutor\n")
+	finalDatabase.write("(\n")
+	finalDatabase.write("PositionID AUTOINCREMENT INT PRIMARY KEY,\n")
+	finalDatabase.write("Position VARCHAR(100) UNIQUE,\n")
+	finalDatabase.write("Evaluation INT\n")
+	finalDatabase.write(");\n")
+	finalDatabase.write("\n\n")
+	for i in range(1000000, 1003208):
+		f = open('C:/Users/chris/massEvaluator/src/' + i + '.ag', 'rb')
+		for line in f:
+			postion, evaluation = line.split(',')
+			finalDatabase.write("INSERT INTO Tutor (Position, Evaluation)\n")
+			finalDatabase.write("VALUES ('" position + "', '" + evaluation + "');\n")
+		finalDatabase.write("\n")
+		f.close()
+	finalDatabase.close()
